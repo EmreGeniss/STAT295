@@ -16,9 +16,9 @@ dice
 now <- Sys.time()
 now
 
-install.packages(
-  c("devtools","roxygen2","testthat","rmarkdown","pkgdown","purrr")
-)
 
-git config --global user.name "EmreGeniss"
-git config --global user.mail "genisemre@gmail.com"
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+
+library(usethis)
+use_git_config(user.name = "EmreGeniss", user.email = "genisemre@gmail.com")
